@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Página oficial de redirección a los desafíos CTF en CyLab: cuenta regresiva, reglamento y código de clase.">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#0b1020">
+  <title>Desafíos CTF · CyLab</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido principal</a>
+
+  <header class="hero">
+    <div class="contenedor hero__interior">
+      <p class="hero__cintillo">CyLab · Capture The Flag</p>
+      <h1 class="hero__titulo">Desafíos CTF</h1>
+      <p class="hero__descripcion">
+        Esta es la página oficial de la competencia. Desde aquí los equipos acceden a la
+        plataforma de aprendizaje CyLab, donde estarán disponibles los desafíos.
+      </p>
+
+      <div class="hero__acciones">
+        <a
+          class="boton boton--primario"
+          id="enlace-cylab"
+          href="https://learn.cylabacademy.org/classrooms/17301/assignments?status=active&amp;page=1"
+        >
+          Ir a los desafíos en CyLab
+          <span class="boton__flecha" aria-hidden="true">→</span>
+        </a>
+        <p class="hero__nota">
+          El acceso siempre está habilitado: CyLab mostrará los desafíos recién a la hora
+          programada.
+        </p>
+      </div>
+
+      <div class="codigo" role="group" aria-labelledby="titulo-codigo">
+        <p class="codigo__titulo" id="titulo-codigo">Código de clase</p>
+        <div class="codigo__fila">
+          <p class="codigo__valor" id="codigo-clase">CIXkTh3Ay</p>
+          <button class="boton boton--secundario" type="button" id="boton-copiar">
+            <span aria-hidden="true">⧉</span>
+            Copiar código
+          </button>
+        </div>
+        <p class="codigo__ayuda">
+          Ingresa este código en CyLab para acceder a la sala de tu equipo.
+        </p>
+        <p class="codigo__estado" id="estado-copia" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido" tabindex="-1">
+    <div class="contenedor">
+      <section class="seccion" aria-labelledby="titulo-cronometro">
+        <h2 id="titulo-cronometro">Cronómetro de la competencia</h2>
+        <p class="seccion__texto">
+          Los desafíos comienzan el <strong>25 de octubre de 2026 a las 14:00</strong>
+          (hora de Chile) y la competencia dura 3&nbsp;horas.
+        </p>
+
+        <div
+          class="cuenta cuenta--espera"
+          id="cuenta"
+          role="timer"
+          aria-live="polite"
+          aria-atomic="true"
+          aria-label="Cuenta regresiva de los desafíos CTF"
+        >
+          <p class="cuenta__estado">
+            <span class="cuenta__punto" aria-hidden="true">●</span>
+            <span id="cuenta-estado">Calculando…</span>
+          </p>
+          <p class="cuenta__tiempo" id="cuenta-tiempo" aria-hidden="true">--:--:--</p>
+          <p class="cuenta__mensaje" id="cuenta-mensaje" aria-hidden="true">
+            Determinando el tiempo restante…
+          </p>
+          <p class="sr-only" id="cuenta-resumen">Cuenta regresiva de los desafíos CTF.</p>
+        </div>
+
+        <noscript>
+          <p class="aviso">
+            Activa JavaScript para ver la cuenta regresiva en vivo. Los desafíos comienzan
+            el 25 de octubre de 2026 a las 14:00 (hora de Chile) y duran 3&nbsp;horas.
+          </p>
+        </noscript>
+      </section>
+
+      <section class="seccion" aria-labelledby="titulo-reglamento">
+        <h2 id="titulo-reglamento">Reglamento</h2>
+        <p class="seccion__texto">
+          Lee estas tres reglas antes de participar. Su cumplimiento es obligatorio para
+          todo el equipo.
+        </p>
+        <ol class="reglas" role="list">
+          <li class="regla">
+            <span class="regla__numero" aria-hidden="true">01</span>
+            <p class="regla__texto">
+              <strong>No está permitido el uso de IA.</strong> Solo puede usarse para tener
+              claridad de los desafíos, como guía para saber qué tipo de desafío es.
+            </p>
+          </li>
+          <li class="regla">
+            <span class="regla__numero" aria-hidden="true">02</span>
+            <p class="regla__texto">
+              <strong>No se puede realizar automatización para resolver los desafíos.</strong>
+            </p>
+          </li>
+          <li class="regla">
+            <span class="regla__numero" aria-hidden="true">03</span>
+            <p class="regla__texto">
+              <strong>En caso de sospecha de uso indebido de IA</strong>, se consultará al
+              equipo sobre el proceso realizado en el desafío.
+            </p>
+          </li>
+        </ol>
+      </section>
+
+      <section class="seccion" aria-labelledby="titulo-participar">
+        <h2 id="titulo-participar">Cómo participar</h2>
+        <ol class="pasos" role="list">
+          <li class="paso">
+            <h3 class="paso__titulo">1. Revisa el reglamento</h3>
+            <p class="paso__texto">
+              Asegúrate de que todo el equipo conozca las tres reglas de la competencia.
+            </p>
+          </li>
+          <li class="paso">
+            <h3 class="paso__titulo">2. Ten a mano el código de clase</h3>
+            <p class="paso__texto">
+              Copia el código <code class="paso__codigo">CIXkTh3Ay</code> para ingresarlo
+              en CyLab cuando te lo solicite.
+            </p>
+          </li>
+          <li class="paso">
+            <h3 class="paso__titulo">3. Ingresa a CyLab</h3>
+            <p class="paso__texto">
+              Presiona el botón de acceso y espera a que los desafíos estén disponibles.
+            </p>
+          </li>
+        </ol>
+      </section>
+    </div>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie__interior">
+      <p class="pie__texto">
+        Página de redirección de los Desafíos CTF · Acceso a la plataforma CyLab
+      </p>
+      <a
+        class="pie__enlace"
+        href="https://learn.cylabacademy.org/classrooms/17301/assignments?status=active&amp;page=1"
+      >
+        Abrir CyLab
+      </a>
+    </div>
+  </footer>
+</body>
+</html>

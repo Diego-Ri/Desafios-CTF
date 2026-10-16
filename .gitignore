@@ -1,0 +1,4 @@
+# El directorio lemoria/ es local y contiene un .env con credenciales de base
+# de datos: nunca debe subirse al repositorio.
+lemoria/
+.env
