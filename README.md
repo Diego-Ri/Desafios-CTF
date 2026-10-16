@@ -24,11 +24,41 @@ flowchart LR
 
 | Archivo | Responsabilidad |
 | --- | --- |
-| `index.html` | Estructura y contenido de la página (hero, cronómetro, reglamento, pasos y pie). |
+| `index.html` | Estructura y contenido de la página (hero, cronómetro, "Antes de comenzar", reglamento, "Cómo participar"/pasos y pie). |
 | `style.css` | Estilos con tema oscuro, acento neón y diseño responsive (mobile-first). |
 | `script.js` | Cuenta regresiva de la competencia y copiar el código de clase. |
 
 No hay build ni dependencias: los tres archivos se sirven tal cual.
+
+---
+
+## Acceso de los participantes
+
+Los participantes **no se registran por su cuenta**: las cuentas ya están
+creadas. El flujo de acceso es:
+
+```mermaid
+flowchart TD
+    A[Correo del participante<br/>usuario + contrasena unica] --> B[Iniciar sesion en CyLab]
+    B --> C[Ingresar codigo de clase<br/>CIXkTh3Ay]
+    C --> D[Acceder a los desafios]
+```
+
+1. **Recepción de credenciales:** cada participante recibe por **correo
+   electrónico** su **usuario** (su propia dirección de email) y una
+   **contraseña única**. Hay que revisar también la **carpeta de spam**.
+2. **Inicio de sesión:** con esas credenciales se ingresa a
+   [CyLab](https://learn.cylabacademy.org/).
+3. **Código de clase:** se ingresa el código `CIXkTh3Ay` para entrar a la sala
+   del equipo.
+4. **Acceso a los desafíos:** una vez iniciada la competencia, los retos se
+   resuelven desde CyLab.
+
+> ℹ️ Si el correo no llega (ni a la carpeta de spam), hay que contactar al
+> **equipo organizador** antes de que comience la competencia.
+
+Esta información se muestra en la sección **"Antes de comenzar"** de la página
+(entre el cronómetro y el reglamento).
 
 ---
 
@@ -86,32 +116,38 @@ horaria).
 
 ## Cambiar el enlace de la clase o el código de acceso
 
-Ambos están directamente en `index.html`:
+Ambos están directamente en `index.html`.
 
 **Enlace a CyLab** — aparece dos veces (mismo destino):
 
-- **Línea 29** — botón principal *"Ir a los desafíos en CyLab"*.
-- **Línea 157** — enlace *"Abrir CyLab"* del pie de página.
+- **Botón principal** *"Ir a los desafíos en CyLab"* (`<a id="enlace-cylab">`).
+- **Enlace *"Abrir CyLab"*** del pie de página.
+
+No hay que guiarse por números de línea: busca el texto
+`learn.cylabacademy.org` para localizar ambas apariciones.
 
 ```html
-<!-- index.html, línea 29 -->
+<!-- Botón principal -->
 <a class="boton boton--primario" id="enlace-cylab"
    href="https://learn.cylabacademy.org/classrooms/17301/assignments?status=active&amp;page=1">
 ```
 
-**Código de acceso** — aparece dos veces (deben coincidir):
+**Código de acceso** — aparece **tres veces** (deben coincidir):
 
-- **Línea 43** — valor mostrado en el bloque "Código de clase".
-- **Línea 135** — repetido en el paso 2 de "Cómo participar".
+- **Bloque "Código de clase"** (`<p class="codigo__valor" id="codigo-clase">`),
+  el valor mostrado y copiable.
+- **Paso "Ingresa el código de clase"** de la sección **"Antes de comenzar"**.
+- **Paso "Ingresa el código de clase"** de la sección **"Cómo participar"**.
 
 ```html
-<!-- index.html, línea 43 -->
+<!-- Bloque "Código de clase" -->
 <p class="codigo__valor" id="codigo-clase">CIXkTh3Ay</p>
 ```
 
-> El botón **"Copiar código"** lee el texto de la línea 43 (elemento
-> `#codigo-clase`), así que basta con actualizar ese valor; mantén la línea 135
-> sincronizada para que el texto sea consistente.
+> El botón **"Copiar código"** lee el texto del elemento `#codigo-clase`, así
+> que basta con actualizar ese valor; mantén sincronizadas las **tres
+> apariciones** para que el texto sea consistente. Busca `CIXkTh3Ay` para
+> localizarlas todas.
 
 ---
 
