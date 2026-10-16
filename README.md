@@ -127,6 +127,10 @@ adicional.
 5. Guarda. GitHub Pages publicará la página en
    `https://<usuario>.github.io/Desafios-CTF/`.
 
+> ℹ️ El repositorio incluye un archivo `.nojekyll` en la raíz para omitir el
+> procesado Jekyll de GitHub Pages y publicar los archivos tal cual. Este modo de
+> despliegue por rama no usa workflows ni GitHub Actions.
+
 ---
 
 ## Accesibilidad y responsive
