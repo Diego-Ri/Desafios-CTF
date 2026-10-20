@@ -7,12 +7,12 @@
    CONFIGURACIÓN
    >>> EVENT_START ES LA ÚNICA LÍNEA QUE HAY QUE EDITAR PARA CAMBIAR LA
    >>> HORA DE INICIO DE LOS DESAFÍOS.
-   Formato: "AAAA-MM-DDTHH:MM:SS±HH:MM" (aquí: 25 oct 2026, 14:00,
-   hora de Chile, verano = UTC-3).
+   Formato: "AAAA-MM-DDTHH:MM:SS±HH:MM" (aquí: 27 oct 2026, 14:00,
+   hora de Chile, verano = UTC-3; termina a las 17:00).
    ========================================================================== */
-const EVENT_START = new Date("2026-10-25T14:00:00-03:00");
+const EVENT_START = new Date("2026-10-27T14:00:00-03:00");
 
-const DURATION_MS = 3 * 60 * 60 * 1000; // Duración de la competencia: 3 horas.
+const DURATION_MS = 3 * 60 * 60 * 1000; // Duración de la competencia: 3 horas (14:00–17:00).
 const TICK_MS = 1000; // El contador se actualiza cada segundo.
 
 /* --------------------------------------------------------------------------

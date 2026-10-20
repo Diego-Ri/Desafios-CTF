@@ -1,6 +1,7 @@
-# Desafíos CTF · CyLab
+# FlagHunter · CyLab
 
-Página web estática intermediaria para una competencia **Capture The Flag (CTF)**.
+Página web estática intermediaria para la competencia **FlagHunter**
+(*Capture The Flag*, CTF).
 Su único propósito es **redirigir** a los equipos hacia la plataforma
 [CyLab](https://learn.cylabacademy.org/), donde se gestionan los equipos, los
 puntajes y el ranking.
@@ -91,15 +92,16 @@ La **única línea que hay que editar** es `EVENT_START` en `script.js`:
 
 ```js
 // script.js
-const EVENT_START = new Date("2026-10-25T14:00:00-03:00");
+const EVENT_START = new Date("2026-10-27T14:00:00-03:00");
 const DURATION_MS = 3 * 60 * 60 * 1000; // Duración: 3 horas.
 ```
 
 **Formato:** `"AAAA-MM-DDTHH:MM:SS±HH:MM"` (ISO 8601 con offset de zona
 horaria).
 
-- El valor actual es `2026-10-25T14:00:00-03:00`: **25 de octubre de 2026 a las
-  14:00, hora de Chile (verano, UTC-3)**.
+- El valor actual es `2026-10-27T14:00:00-03:00`: **27 de octubre de 2026 a
+  las 14:00, hora de Chile (verano, UTC-3)**, con término a las **17:00**
+  (duración de 3 horas).
 - La duración se define en `DURATION_MS`. Actualmente son 3 horas
   (`3 * 60 * 60 * 1000`).
 
