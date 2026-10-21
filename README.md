@@ -193,6 +193,9 @@ organizador. Aplican a **todo el equipo**:
 2. **No se puede automatizar** la resolución de los desafíos.
 3. **En caso de sospecha de uso indebido de IA**, se consultará al equipo sobre
    el proceso realizado en el desafío.
+4. **Los equipos deben estar formados por entre 1 y 4 miembros.**
+5. **El puntaje de cada desafío depende de su dificultad:** fácil 10 puntos,
+   media 30 puntos, alta 80 puntos.
 
 ---
 
