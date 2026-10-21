@@ -196,6 +196,9 @@ organizador. Aplican a **todo el equipo**:
 4. **Los equipos deben estar formados por entre 1 y 4 miembros.**
 5. **El puntaje de cada desafío depende de su dificultad:** fácil 10 puntos,
    media 30 puntos, alta 80 puntos.
+6. **El ganador será el equipo que acumule más puntos durante la competencia.**
+7. **En caso de empate, se decidirá por el equipo que haya resuelto más
+   desafíos.**
 
 ---
 
